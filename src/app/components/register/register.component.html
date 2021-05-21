@@ -1,0 +1,90 @@
+<div class="bg-theme bg-theme1">
+  <!-- wrapper -->
+  <div class="wrapper">
+    <div class="section-authentication-register d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col-12 col-lg-10 mx-auto">
+          <div class="card radius-15">
+            <div class="row no-gutters">
+              <div class="col-lg-12">
+                <div class="card-body p-md-5">
+                  <div class="text-center">
+                    <img src="assets/images/logo-icon.png" width="80" alt="">
+                    <h3 class="mt-4 font-weight-bold">Регистрация</h3>
+                  </div>
+
+                  <div class="form-group mt-4">
+                    <label>Email</label>
+                    <input type="text" class="form-control" placeholder="example@user.com"/>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label>Имя</label>
+                      <input type="text" class="form-control" placeholder="Имя"/>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Фамилия</label>
+                      <input type="text" class="form-control" placeholder="Фамилия"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Пароль</label>
+                    <div class="input-group" id="show_hide_password">
+                      <input class="form-control border-right-0" type="password" value="12345678">
+                      <div class="input-group-append"><a href="javascript:;" class="input-group-text border-left-0"><i
+                        class='bx bx-hide'></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Тип пользователя</label>
+                    <select class="form-control">
+                      <option>Житель города</option>
+                      <option>Гость</option>
+                      <option>Поставщик услуг</option>
+                    </select>
+                  </div>
+                  <div class="btn-group mt-3 w-100">
+                    <button type="button" class="btn btn-light btn-block" routerLink="/login">Зарегестрироваться</button>
+                    <button type="button" class="btn btn-light"><i class="lni lni-arrow-right"></i>
+                    </button>
+                  </div>
+                  <hr/>
+                  <div class="text-center mt-4">
+                    <p class="mb-0">У Вас уже есть аккаунт? <a routerLink="/login">Войти</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+<!--              <div class="col-lg-6">-->
+<!--                <img src="assets/images/login-images/register-frent-img.jpg" class="card-img login-img h-100" alt="...">-->
+<!--              </div>-->
+            </div>
+            <!--end row-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end wrapper -->
+  <!-- JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!--Password show & hide js -->
+  <script>
+    $(document).ready(function () {
+      $("#show_hide_password a").on('click', function (event) {
+        event.preventDefault();
+        if ($('#show_hide_password input').attr("type") == "text") {
+          $('#show_hide_password input').attr('type', 'password');
+          $('#show_hide_password i').addClass("bx-hide");
+          $('#show_hide_password i').removeClass("bx-show");
+        } else if ($('#show_hide_password input').attr("type") == "password") {
+          $('#show_hide_password input').attr('type', 'text');
+          $('#show_hide_password i').removeClass("bx-hide");
+          $('#show_hide_password i').addClass("bx-show");
+        }
+      });
+    });
+  </script>
+</div>
