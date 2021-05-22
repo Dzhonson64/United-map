@@ -5,34 +5,40 @@
   <title>UnitedMap</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="assets/css/pace.min.css" rel="stylesheet" />
-  <script src="assets/js/pace.min.js"></script>
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+  <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+  <!--plugins-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+  <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+<!--  &lt;!&ndash; loader&ndash;&gt;-->
+<!--  <link href="assets/css/pace.min.css" rel="stylesheet" />-->
+<!--  <script src="assets/js/pace.min.js"></script>-->
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <!-- Icons CSS -->
   <link rel="stylesheet" href="assets/css/icons.css" />
   <!-- App CSS -->
   <link rel="stylesheet" href="assets/css/app.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 
 </head>
 <body>
 <app-root></app-root>
-<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+
+
+<!--<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"-->
+<!--        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"-->
+<!--        crossorigin="anonymous"></script>-->
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <!--plugins-->
 <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-<script src="assets/plugins/metismenu/js/m etisMenu.min.js"></script>
+<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
 <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
 <!-- Vector map JavaScript -->
 <script src="assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
@@ -42,6 +48,31 @@
 <script src="assets/plugins/vectormap/jquery-jvectormap-uk-mill-en.js"></script>
 <script src="assets/plugins/vectormap/jquery-jvectormap-au-mill.js"></script>
 <script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full&skin=dark"></script>
+<script type="text/javascript">
+  var map;
+
+  DG.then(function () {
+    map = DG.map('map', {
+      center: [44.72, 37.79],
+      zoom: 11,
+      poi: true
+    });
+
+
+    var myIcon = DG.icon({
+      iconUrl: '/assets/images/museum.png',
+      iconSize: [20, 30],
+
+    });
+
+    DG.marker([44.72, 37.78], {icon: myIcon}).addTo(map).bindPopup('');
+    DG.marker([44.74, 37.73], {icon: myIcon}).addTo(map).bindPopup('');
+    DG.marker([44.71, 37.85], {icon: myIcon}).addTo(map).bindPopup('');
+  });
+</script>
+
 
 </body>
 </html>

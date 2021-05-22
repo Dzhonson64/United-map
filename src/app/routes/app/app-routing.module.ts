@@ -1,27 +1,25 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {LoginComponent} from "../../components/login/login.component";
-import {AppModule} from "../../app.module";
-import {AppComponent} from "../../app.component";
-import {RegisterComponent} from "../../components/register/register.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {AuthModule} from "./auth/auth.module";
+import {IndexComponent} from "../../components/index/index.component";
+import {WeatherComponent} from "../../components/weather/weather.component";
+import {BookingComponent} from "../../components/booking/booking.component";
+import {MapComponent} from "../../components/map/map.component";
 
 
 const routes: Routes = [
   {
-    path: '', component: AppComponent
+    path: '', component:IndexComponent, children: [
+      {path: 'weather', component: WeatherComponent},
+      {path: 'booking', component: BookingComponent},
+      {path: 'map', component: MapComponent},
+    ]
+
   },
+
   {
-    path: 'login', component: LoginComponent
+    path: 'auth', loadChildren: () => AuthModule
   },
-  {
-    path: 'registration', component: RegisterComponent
-  }
-  // {
-  //   path: 'registration', children: [
-  //     {path: 'user', component: RegistrationComponent},
-  //     {path: 'company', component: CompanyRegistrationComponent}
-  //   ]
-  // },
   // { path: 'me', loadChildren: () => ProfileModule},
 
 ]
