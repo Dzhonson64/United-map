@@ -1,0 +1,21 @@
+.card-image {
+  width: 90%;
+}
+
+col h1 {
+  font-size: large;
+  font-weight: bolder;
+}
+
+p strong {
+  font-weight: bold;
+}
+
+col p {
+  font-size: medium;
+}
+
+h3 {
+  font-weight: 600;
+  margin-top: 15px;
+}

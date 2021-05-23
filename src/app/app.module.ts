@@ -17,6 +17,12 @@ import { IndexContentComponent } from './components/index-content/index-content.
 import { WeatherComponent } from './components/weather/weather.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { MapComponent } from './components/map/map.component';
+import { ExcursionComponent } from './components/excursion/excursion.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
+import { RestaurantComponent } from './components/restaurant/restaurant.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TransportComponent } from './components/transport/transport.component';
+import { SharingComponent } from './components/sharing/sharing.component';
 
 
 @NgModule({
@@ -29,7 +35,13 @@ import { MapComponent } from './components/map/map.component';
     IndexContentComponent,
     WeatherComponent,
     BookingComponent,
-    MapComponent
+    MapComponent,
+    ExcursionComponent,
+    ScheduleComponent,
+    RestaurantComponent,
+    ProfileComponent,
+    TransportComponent,
+    SharingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<div class="diamond"></div>
+<div class="form-wrap">
+  <h2 class="mob">Hotel Booking Form</h2>
+  <h3 class="mob">Mobile Version</h3>
+  <h5 class="mob">view on a desktop for the full experience</h5>
+  <form action="">
+    <div class="location">
+      <label for="location">КУДА</label><br/>
+      <input type="text" name="location" placeholder="New York, NY"/><br/>
+    </div>
+    <div class="guests">
+      <label for="guests">КОЛИЧЕСТВО ЛЮДЕЙ</label><br/><br/>
+      <button class="counter-btn" id="cnt-down" type="button">-</button>
+      <input id="guestNo" type="text" name="guests" value="2"/>
+      <button class="counter-btn" id="cnt-up" type="button">+</button>
+    </div>
+    <div class="dates">
+      <div class="arrival">
+        <label for="arrival">ДАТА ПРИБЫТИЯ</label><br/>
+        <input name="arrival" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="10/03/2016"/>
+      </div>
+      <div class="departure">
+        <label for="arrival">ДАТА ОТПРАВЛЕНИЯ</label><br/>
+        <input name="departure" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="05/11/2016"/>
+      </div>
+    </div>
+  </form>
+  <button class="btn" type="button">Оформить заказ</button>
+
+</div>
